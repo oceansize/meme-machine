@@ -28,13 +28,34 @@
 
 <section>
     <h2>Step 2. Add Text</h2>
-    <input id="text" type="text" >
+    <input id="text" type="text" value="Put your meme text in here" >
 </section>
 
 <section id="style-image">
   <h2>Step 3. Style It!</h2>
     <div id="workspace">
         <p id="caption"></p>
+    </div>
+    <div id="controls">
+      Left: <input type="number" id="left" value="10">
+      Top: <input type="number" id="top" value="10">
+      Width: <input type="number" id="width" value="400">
+      Size: <input type="number" id="size" value="32">
+      Colour: <select id="colour">
+                      <option>Red</option>
+                      <option>Green</option>
+                      <option>White</option>
+                      <option>Black</option>
+                      <option>Blue</option>
+                      <option>Yellow</option>
+                      <option>Grey</option>
+                      <option>Orange</option>
+                  </select>
+      Align: <select id="alignment">
+                  <option>Left</option>
+                  <option>Right</option>
+                  <option>Center</option>
+                </select>    
     </div>
 </section>
 
