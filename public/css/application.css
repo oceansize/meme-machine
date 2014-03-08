@@ -1,3 +1,10 @@
 body {
   background-image: url(/images/subtle_surface_@2X.png);
 }
+
+#workspace {
+  width: 600px;
+  min-height: 300px;
+  border: 5px dashed red;
+  margin: 0 auto;
+}
