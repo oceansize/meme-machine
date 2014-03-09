@@ -2,6 +2,10 @@
 $(document).on('click', '#go-search', function() {
   findImagesOnGoogle({keywords: $('#search-term').val(), container: '#search-results'}) 
 }); 
+//Does the same thing, but this time the user can just hit enter, instead of clicking the search button
+$(document).on('keydown', '#search-term', function() {
+  findImagesOnGoogle({keywords: $('#search-term').val(), container: '#search-results'}) 
+}); 
 
 //When an image result is clicked, the url is stored in 'url'. Then #workspace is cleared of any existing images. A new img element is then created and the image result in 'url' is loaded into it.
 $(document).on('click', '#search-results img', function() {

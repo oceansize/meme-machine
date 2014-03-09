@@ -1,25 +1,30 @@
+//Check with google to see what the hell this means.
 google.load("search", "1");
-
+//The following block is responsible for the image search.
 function findImagesOnGoogle(options) {  
-  $(options.container).empty();
-  $(options.container).append($("<p>").text("Searching..."));
+  $(options.container).empty();//empties #container
+  $(options.container).append($("<p>").text("Searching..."));//puts 'searching text in #container in case of delays'
 
-  var imageSearch = new google.search.ImageSearch();
+  var imageSearch = new google.search.ImageSearch();//Informs google that we are about to perform an image search.
   imageSearch.setSearchCompleteCallback(this, function() {
     google.search.Search.getBranding('branding');
-    $(options.container).empty();
+    $(options.container).empty();//Makes sure #container is empty, and ready to receive results
     for (var i = 0; i < imageSearch.results.length; i++) {
       var result = imageSearch.results[i];      
-      var img = $("<img>");
+      var img = $("<img>");//create new img tag for each search result.
       img.attr('src', result.tbUrl);
       img.data('url', result.url);
       img.appendTo(options.container);
     }
   }, null);
-  imageSearch.setResultSetSize(8);
-  imageSearch.execute(options.keywords);  
+  imageSearch.setResultSetSize(8);//This specifies how many results we want returned. In this case, 8 - which is the per-page max according to Google's restrictions
+  imageSearch.execute(options.keywords);//This refers to the search terms in  #search-term
 }
+//====================================================================
+//Anytime the page is modified via the inputs, the url is modified. The term 'Hash' seems to be particular to javascript
+//====================================================================
 
+//Saves parameters to URL
 function saveParametersToHash() {
   $('input, select').change(function() {
     var hash = {};
@@ -37,6 +42,7 @@ function saveParametersToHash() {
   });  
 }
 
+//Loads parameters from URL
 function loadParametersFromHash() {  
   try {
     var hash = JSON.parse(unescape(window.location.hash).replace('#', ''));

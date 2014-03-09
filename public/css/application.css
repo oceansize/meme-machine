@@ -32,9 +32,8 @@ header {
   text-align: center;
   font-size: 1em;
 }
- #search-result {
-  min-height: 75px;
-  background-color: #1b123b;
+ #search-results, #branding {
+  background-color: #f1c40f;
 }
 #style-image {
     background-color: #1b123b;
@@ -42,6 +41,9 @@ header {
 }
 #text{
   width: 355px;
+}
+input placeholder{
+  color: #fff;
 }
 input, button {
   border: none;
@@ -78,6 +80,9 @@ input, button {
   width: 4em; 
   background-color: #e42e30;
 }
+.styled-select {
+  display: inline;
+}
 #caption {
   position: absolute;
   top: 10px;
@@ -109,7 +114,7 @@ h1 {
 }
 .makers-logo a img {
 max-width: 200px;
-margin: 20px;
+margin: 5px 20px 10px 20px;
 }
 .tech-credit {
   font-size: 12px;

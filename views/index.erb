@@ -21,7 +21,7 @@
   <section class="image-select">
     <span class="step">1</span>
 <!--     <p>Enter the keyword to search for images</p>
- -->    <input id="search-term" type="text" value="Search for an image. ">
+ -->    <input id="search-term" type="text" placeholder="Search for an image. ">
     <button id="go-search">Go!</button>
   </section>
   <section>
@@ -30,7 +30,7 @@
   </section>
 <section class="copy">
     <span class="step">2</span>
-    <input id="text" type="text" value="Put your meme text in here" >
+    <input id="text" type="text" placeholder="Put your meme text in here" >
 </section>
 
 <section id="style-image">
@@ -45,8 +45,9 @@
       Top: <input type="number" id="top" value="10">
       Width: <input type="number" id="width" value="275">
       Size: <input type="number" id="size" value="10">
-      Colour: <select id="colour">
-                      <option>White</option>
+      Colour: <div class="styled-select">
+                    <select id="colour">
+                      <option value="#fff">White</option>
                       <option>Red</option>
                       <option>Green</option>
                       <option>Black</option>
@@ -55,23 +56,26 @@
                       <option>Grey</option>
                       <option>Orange</option>
                   </select>
-      Align: <select id="alignment">
-                  <option>Center</option>
-                  <option>Left</option>
-                  <option>Right</option>
-                </select>    
+                  </div>
+      Align: <div class="styled-select">
+                  <select id="alignment">
+                    <option>Center</option>
+                    <option>Left</option>
+                    <option>Right</option>
+                  </select>
+              </div>
     </div>
 </section>
 
 <footer>
-      <div class="makers-logo">
-      <a href="http://www.makersacademy.com/"><img src="http://www.makersacademy.com/images/logo.png"></a>
-    </div>
     <div class="makers-credit">
         I built this page during a weekend course at <a href="http://www.makersacademy.com/">Makers Academy in London.</a>
     </div>
     <div class="tech-credit">
         This page uses Google Image Search, Ruby, Sinatra, Javascript, jQuery, HTML & CSS.
+    </div>
+          <div class="makers-logo">
+      <a href="http://www.makersacademy.com/"><img src="/images/makers-logo.png"></a>
     </div>
     <div id="twitter">
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://goo.gl/9dZnjI" data-text="Check out my MEME Generator! Made with love at @makersacademy" data-via="roiDsign" data-dnt="true">Tweet</a>
