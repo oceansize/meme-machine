@@ -1,26 +1,117 @@
-body {
-  background-image: url(/images/subtle_surface_@2X.png);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+/*-----------------------------
+BOX SIZING - Negates box model
+-----------------------------*/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
-
-#workspace {
+body {
   width: 600px;
-  min-height: 300px;
-  border: 5px dashed red;
+  margin: 0 auto;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*LAYOUT*/
+header {
+  background-color: #e42e30;
+  color: #fff;
+  min-height: 75px;
+}
+.image-select {
+  min-height: 100px;
+  background-color: #f1c40f;
+  padding-top: 1.75em;
+}
+#search-term, #text{
+  padding: 10px;
+  width: 300px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+}
+ #search-result {
+  min-height: 75px;
+  background-color: #1b123b;
+}
+#style-image {
+    background-color: #1b123b;
+    padding-bottom: 50px;
+}
+#text{
+  width: 355px;
+}
+input, button {
+  border: none;
+  background-color: #1b123b;
+  color: #fff;
+}
+#go-search {
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+}
+.copy {
+  min-height: 100px; 
+  padding-top: 1.75em;
+  background-color: #1b123b;  
+}
+#workspace {
+  max-width: 300px;
+  min-height: 200px;
+  background-color: #ecf0f1;
   margin: 0 auto;
   position: relative;
 }
 #workspace img {
-  width: 600px;
+  width: 300px;
+}
+#controls {
+  font-size: .5em;
+  background-color: #e42e30;
+  padding: 2em;
+}
+#controls input {
+  width: 4em; 
+  background-color: #e42e30;
 }
 #caption {
   position: absolute;
   top: 10px;
   left: 10px;
   font-weight: bold;
-  font-family: Helvetica;
   text-shadow: 0 0 5px rgba(0,0,0,0.4);
-  width: 400px;
-  font-size: 32px;
-  color: red;
+  width: 275px;
+  font-size: 15px;
+  color: white;
   margin: 0;
+}
+/*TYPOGRAPHY*/
+h1 {
+  font-size: 1em;
+  font-weight: bold;
+  padding-top: 1.8em;
+  letter-spacing: .65em;
+}
+.step {
+  font-size: 1.75em;
+  position: relative;
+  bottom : -.15em;
+  font-weight: bold;
+  color: #e42e30;
+}
+.makers-credit {
+  font-size: 12px;
+  margin: 5px;
+}
+.makers-logo a img {
+max-width: 200px;
+margin: 20px;
+}
+.tech-credit {
+  font-size: 12px;
+  margin: 5px;
 }

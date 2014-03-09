@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="/css/css-reset.css">
   <link rel="stylesheet" href="/css/application.css">
 
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -8,43 +9,46 @@
   <script src="/javascript/support.js"></script>
   <script src="/javascript/application.js"></script>
 
-  <title>Motivational Posters</title>
+  <title>MEME GENERATOR</title>
 
 </head>
 
 <body>
   <header>
-    <h1>Motivational Posters</h1>
+    <h1>MEME GENERATOR</h1>
   </header>
 
-  <section>
-    <h2>Step 1. Select an image</h2>
-    <p>Enter the keyword to search for images</p>
-    <input id="search-term" type="text">
+  <section class="image-select">
+    <span class="step">1</span>
+<!--     <p>Enter the keyword to search for images</p>
+ -->    <input id="search-term" type="text" value="Search for an image. ">
     <button id="go-search">Go!</button>
+  </section>
+  <section>
     <div id="search-results"></div>
     <div id="branding"></div>
   </section>
-
-<section>
-    <h2>Step 2. Add Text</h2>
+<section class="copy">
+    <span class="step">2</span>
     <input id="text" type="text" value="Put your meme text in here" >
 </section>
 
 <section id="style-image">
-  <h2>Step 3. Style It!</h2>
+       <span class="step" style="float: left; left: 110px;">3</span>  
     <div id="workspace">
         <p id="caption"></p>
     </div>
+</section>
+<section>
     <div id="controls">
       Left: <input type="number" id="left" value="10">
       Top: <input type="number" id="top" value="10">
-      Width: <input type="number" id="width" value="400">
-      Size: <input type="number" id="size" value="32">
+      Width: <input type="number" id="width" value="275">
+      Size: <input type="number" id="size" value="10">
       Colour: <select id="colour">
+                      <option>White</option>
                       <option>Red</option>
                       <option>Green</option>
-                      <option>White</option>
                       <option>Black</option>
                       <option>Blue</option>
                       <option>Yellow</option>
@@ -52,12 +56,28 @@
                       <option>Orange</option>
                   </select>
       Align: <select id="alignment">
+                  <option>Center</option>
                   <option>Left</option>
                   <option>Right</option>
-                  <option>Center</option>
                 </select>    
     </div>
 </section>
+
+<footer>
+      <div class="makers-logo">
+      <a href="http://www.makersacademy.com/"><img src="http://www.makersacademy.com/images/logo.png"></a>
+    </div>
+    <div class="makers-credit">
+        I built this page during a weekend course at <a href="http://www.makersacademy.com/">Makers Academy in London.</a>
+    </div>
+    <div class="tech-credit">
+        This page uses Google Image Search, Ruby, Sinatra, Javascript, jQuery, HTML & CSS.
+    </div>
+    <div id="twitter">
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://goo.gl/9dZnjI" data-text="Check out my MEME Generator! Made with love at @makersacademy" data-via="roiDsign" data-dnt="true">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </div>
+</footer>
 
 </body>
 </html>

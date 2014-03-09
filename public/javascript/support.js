@@ -53,20 +53,20 @@ function loadParametersFromHash() {
   } catch (err) {}
 }
 
-function updateTweetButton() {    
-  if (typeof twttr == 'undefined') {
-    return;
-  }
-  $('#twitter').empty();
-  var a = $('<a>')
-            // .attr("data-url", window.location.href)
-            .attr("href", "https://twitter.com/share")
-            .addClass("twitter-share-button")
-            .attr("data-text", "I built Motivational Posters page @makersacademy today!")
-            .append($("Tweet"));
-  a.appendTo('#twitter');
-  twttr.widgets.load();
-}
+// function updateTweetButton() {    
+//   if (typeof twttr == 'undefined') {
+//     return;
+//   }
+//   $('#twitter').empty();
+//   var a = $('<a>')
+//             // .attr("data-url", window.location.href)
+//             .attr("href", "https://twitter.com/share")
+//             .addClass("twitter-share-button")
+//             .attr("data-text", "I built Motivational Posters page @makersacademy today!")
+//             .append($("Tweet"));
+//   a.appendTo('#twitter');
+//   twttr.widgets.load();
+// }
 
 $(function() {
   loadParametersFromHash();
