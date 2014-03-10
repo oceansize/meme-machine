@@ -35,6 +35,11 @@ header {
  #search-results, #branding {
   background-color: #f1c40f;
 }
+#search-results img {
+  margin: 5px;
+  vertical-align: top;
+  border: solid 4px #1b123b;
+}
 #style-image {
     background-color: #1b123b;
     padding-bottom: 50px;
